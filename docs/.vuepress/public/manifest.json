@@ -1,0 +1,8 @@
+{
+  "name": "Markdown",
+  "short_name": "Markdown",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#fff",
+  "theme_color": "#ff4c00"
+}
