@@ -10,7 +10,7 @@ trait CompilesMarkdown
      * @param  string  $expression
      * @return string
      */
-    protected function compileMarkdown($expression)
+    protected function compileMarkdownStatement($expression)
     {
         return $expression ? "<?php echo markdown$expression; ?>" : '<?php echo markdown(\'';
     }
@@ -21,7 +21,7 @@ trait CompilesMarkdown
      * @param  string  $expression
      * @return string
      */
-    protected function compileEndmarkdown($expression)
+    protected function compileEndmarkdownStatement($expression)
     {
         return '\'); ?>';
     }
@@ -34,7 +34,7 @@ trait CompilesMarkdown
      */
     protected function compileMarkdown($expression)
     {
-        return $this->compileMarkdown($expression);
+        return $this->compileMarkdownStatement($expression);
     }
 
     /**
@@ -45,6 +45,6 @@ trait CompilesMarkdown
      */
     protected function compileEndmarkdown($expression)
     {
-        return $this->compileEndmarkdown($expression);
+        return $this->compileEndmarkdownStatement($expression);
     }
 }
